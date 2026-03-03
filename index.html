@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+	<div class="scroll-container">
+		<!-- Greeting Header -->
+		<header class="header">
+			<div class="header__left">
+				<p class="header__date">WEDNESDAY, JAN 15</p>
+				<h1 class="header__greeting">Good morning,<br><span class="header__name">Marcus</span></h1>
+			</div>
+			<div class="header__avatar">
+				<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&q=80" alt="Avatar" />
+			</div>
+		</header>
+
+		<!-- Health Score -->
+		<section class="health-score">
+			<div class="health-score__ring">
+				<svg viewBox="0 0 160 160" class="health-score__svg">
+					<circle cx="80" cy="80" r="70" class="health-score__track" />
+					<circle cx="80" cy="80" r="70" class="health-score__fill" stroke-dasharray="440"
+						stroke-dashoffset="66" />
+				</svg>
+				<div class="health-score__value">
+					<span class="health-score__number">85</span>
+					<span class="health-score__label">HEALTH SCORE</span>
+				</div>
+			</div>
+			<div class="health-score__tags">
+				<span class="tag tag--active">SLEEP <i data-lucide="check" class="tag__icon"></i></span>
+				<span class="tag tag--active">ACTIVITY <i data-lucide="check" class="tag__icon"></i></span>
+				<span class="tag tag--warn">RECOVERY <i data-lucide="alert-triangle" class="tag__icon"></i></span>
+			</div>
+		</section>
+
+		<!-- Vitals Row -->
+		<section class="section">
+			<h2 class="section__title">VITALS</h2>
+			<div class="vitals-grid">
+				<div class="vital-card">
+					<div class="vital-card__icon-wrap">
+						<i data-lucide="heart" class="vital-card__icon vital-card__icon--hr"></i>
+					</div>
+					<span class="vital-card__value">72 <small>bpm</small></span>
+					<span class="vital-card__label">HEART RATE</span>
+					<span class="vital-card__trend vital-card__trend--down"><i data-lucide="trending-down" class="trend-icon"></i> 3%</span>
+				</div>
+				<div class="vital-card">
+					<div class="vital-card__icon-wrap">
+						<i data-lucide="footprints" class="vital-card__icon"></i>
+					</div>
+					<span class="vital-card__value">8,432</span>
+					<span class="vital-card__label">STEPS</span>
+					<span class="vital-card__trend vital-card__trend--up"><i data-lucide="trending-up" class="trend-icon"></i> 12%</span>
+				</div>
+				<div class="vital-card">
+					<div class="vital-card__icon-wrap">
+						<i data-lucide="flame" class="vital-card__icon vital-card__icon--cal"></i>
+					</div>
+					<span class="vital-card__value">1,847 <small>kcal</small></span>
+					<span class="vital-card__label">CALORIES</span>
+					<span class="vital-card__trend vital-card__trend--up"><i data-lucide="trending-up" class="trend-icon"></i> 8%</span>
+				</div>
+				<div class="vital-card">
+					<div class="vital-card__icon-wrap">
+						<i data-lucide="timer" class="vital-card__icon"></i>
+					</div>
+					<span class="vital-card__value">47 <small>min</small></span>
+					<span class="vital-card__label">ACTIVE</span>
+					<span class="vital-card__trend vital-card__trend--up"><i data-lucide="trending-up" class="trend-icon"></i> 5%</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Sleep Summary -->
+		<section class="section">
+			<h2 class="section__title">SLEEP SUMMARY</h2>
+			<div class="card sleep-card">
+				<div class="sleep-card__top">
+					<div class="sleep-card__stat">
+						<span class="sleep-card__big">7<small>h</small> 23<small>m</small></span>
+						<span class="sleep-card__sublabel">DURATION</span>
+					</div>
+					<div class="sleep-card__stat sleep-card__stat--right">
+						<span class="sleep-card__big">82</span>
+						<span class="sleep-card__sublabel">QUALITY SCORE</span>
+					</div>
+				</div>
+				<div class="sleep-card__stages">
+					<div class="sleep-bar">
+						<div class="sleep-bar__segment sleep-bar__segment--deep" style="width:22%"></div>
+						<div class="sleep-bar__segment sleep-bar__segment--light" style="width:45%"></div>
+						<div class="sleep-bar__segment sleep-bar__segment--rem" style="width:20%"></div>
+						<div class="sleep-bar__segment sleep-bar__segment--awake" style="width:13%"></div>
+					</div>
+					<div class="sleep-legend">
+						<span class="sleep-legend__item"><span class="sleep-legend__dot sleep-legend__dot--deep"></span>Deep
+						1h 37m</span>
+						<span class="sleep-legend__item"><span class="sleep-legend__dot sleep-legend__dot--light"></span>Light
+						3h 19m</span>
+						<span class="sleep-legend__item"><span class="sleep-legend__dot sleep-legend__dot--rem"></span>REM
+						1h 28m</span>
+						<span class="sleep-legend__item"><span class="sleep-legend__dot sleep-legend__dot--awake"></span>Awake
+						59m</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Activity Progress -->
+		<section class="section">
+			<h2 class="section__title">ACTIVITY GOALS</h2>
+			<div class="activity-grid">
+				<div class="activity-ring-card">
+					<div class="activity-ring" data-progress="84">
+						<svg viewBox="0 0 100 100">
+							<circle cx="50" cy="50" r="40" class="activity-ring__track" />
+							<circle cx="50" cy="50" r="40" class="activity-ring__fill activity-ring__fill--steps"
+								stroke-dasharray="251" stroke-dashoffset="40" />
+						</svg>
+						<div class="activity-ring__center">
+							<i data-lucide="footprints" class="activity-ring__icon"></i>
+						</div>
+					</div>
+					<span class="activity-ring-card__value">8,432</span>
+					<span class="activity-ring-card__target">/ 10,000</span>
+					<span class="activity-ring-card__label">STEPS</span>
+				</div>
+				<div class="activity-ring-card">
+					<div class="activity-ring" data-progress="72">
+						<svg viewBox="0 0 100 100">
+							<circle cx="50" cy="50" r="40" class="activity-ring__track" />
+							<circle cx="50" cy="50" r="40" class="activity-ring__fill activity-ring__fill--cal"
+								stroke-dasharray="251" stroke-dashoffset="70" />
+						</svg>
+						<div class="activity-ring__center">
+							<i data-lucide="flame" class="activity-ring__icon"></i>
+						</div>
+					</div>
+					<span class="activity-ring-card__value">432</span>
+					<span class="activity-ring-card__target">/ 600 kcal</span>
+					<span class="activity-ring-card__label">ACTIVE CAL</span>
+				</div>
+				<div class="activity-ring-card">
+					<div class="activity-ring" data-progress="78">
+						<svg viewBox="0 0 100 100">
+							<circle cx="50" cy="50" r="40" class="activity-ring__track" />
+							<circle cx="50" cy="50" r="40" class="activity-ring__fill activity-ring__fill--exercise"
+								stroke-dasharray="251" stroke-dashoffset="55" />
+						</svg>
+						<div class="activity-ring__center">
+							<i data-lucide="zap" class="activity-ring__icon"></i>
+						</div>
+					</div>
+					<span class="activity-ring-card__value">47</span>
+					<span class="activity-ring-card__target">/ 60 min</span>
+					<span class="activity-ring-card__label">EXERCISE</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Hydration Tracker -->
+		<section class="section">
+			<h2 class="section__title">HYDRATION</h2>
+			<div class="card hydration-card">
+				<div class="hydration-card__top">
+					<div class="hydration-card__info">
+						<span class="hydration-card__value">5 <small>/ 8 glasses</small></span>
+						<span class="hydration-card__sublabel">1.25L OF 2.0L TARGET</span>
+					</div>
+					<button class="hydration-card__add" id="addWater">
+            <i data-lucide="plus" class="hydration-card__add-icon"></i>
+          </button>
+				</div>
+				<div class="hydration-glasses" id="hydrationGlasses">
+					<div class="hydration-glass hydration-glass--filled"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass hydration-glass--filled"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass hydration-glass--filled"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass hydration-glass--filled"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass hydration-glass--filled"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass"><i data-lucide="droplets"></i></div>
+					<div class="hydration-glass"><i data-lucide="droplets"></i></div>
+				</div>
+				<div class="hydration-bar">
+					<div class="hydration-bar__fill" style="width: 62.5%"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Weekly Trends -->
+		<section class="section">
+			<h2 class="section__title">WEEKLY STEPS</h2>
+			<div class="card weekly-card">
+				<div class="weekly-chart" id="weeklyChart">
+					<div class="weekly-chart__bar-group" data-day="Mon">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill" style="height:65%"></div>
+						</div>
+						<span class="weekly-chart__day">M</span>
+					</div>
+					<div class="weekly-chart__bar-group" data-day="Tue">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill" style="height:80%"></div>
+						</div>
+						<span class="weekly-chart__day">T</span>
+					</div>
+					<div class="weekly-chart__bar-group" data-day="Wed">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill weekly-chart__bar-fill--active" style="height:84%"></div>
+						</div>
+						<span class="weekly-chart__day weekly-chart__day--active">W</span>
+					</div>
+					<div class="weekly-chart__bar-group" data-day="Thu">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill weekly-chart__bar-fill--future" style="height:0%"></div>
+						</div>
+						<span class="weekly-chart__day weekly-chart__day--future">T</span>
+					</div>
+					<div class="weekly-chart__bar-group" data-day="Fri">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill weekly-chart__bar-fill--future" style="height:0%"></div>
+						</div>
+						<span class="weekly-chart__day weekly-chart__day--future">F</span>
+					</div>
+					<div class="weekly-chart__bar-group" data-day="Sat">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill weekly-chart__bar-fill--future" style="height:0%"></div>
+						</div>
+						<span class="weekly-chart__day weekly-chart__day--future">S</span>
+					</div>
+					<div class="weekly-chart__bar-group" data-day="Sun">
+						<div class="weekly-chart__bar-track">
+							<div class="weekly-chart__bar-fill weekly-chart__bar-fill--future" style="height:0%"></div>
+						</div>
+						<span class="weekly-chart__day weekly-chart__day--future">S</span>
+					</div>
+				</div>
+				<div class="weekly-card__footer">
+					<span class="weekly-card__avg">AVG <strong>7,892</strong> steps/day</span>
+					<span class="weekly-card__trend"><i data-lucide="trending-up" class="trend-icon trend-icon--lime"></i> 6% vs last week</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- Body Metrics -->
+		<section class="section">
+			<h2 class="section__title">BODY METRICS</h2>
+			<div class="card body-card">
+				<div class="body-card__metrics">
+					<div class="body-card__metric">
+						<span class="body-card__value">74.2 <small>kg</small></span>
+						<span class="body-card__label">WEIGHT</span>
+					</div>
+					<div class="body-card__divider"></div>
+					<div class="body-card__metric">
+						<span class="body-card__value">22.8</span>
+						<span class="body-card__label">BMI</span>
+					</div>
+					<div class="body-card__divider"></div>
+					<div class="body-card__metric">
+						<span class="body-card__value">16.3 <small>%</small></span>
+						<span class="body-card__label">BODY FAT</span>
+					</div>
+				</div>
+				<canvas id="sparkline" class="body-card__sparkline"></canvas>
+				<span class="body-card__sparkline-label">WEIGHT — LAST 30 DAYS</span>
+			</div>
+		</section>
+
+		<!-- Mindfulness -->
+		<section class="section section--last">
+			<h2 class="section__title">MINDFULNESS</h2>
+			<div class="card mindful-card">
+				<div class="mindful-card__row">
+					<div class="mindful-card__item">
+						<i data-lucide="brain" class="mindful-card__icon"></i>
+						<div class="mindful-card__text">
+							<span class="mindful-card__value">Low</span>
+							<span class="mindful-card__label">STRESS LEVEL</span>
+						</div>
+						<div class="mindful-card__indicator mindful-card__indicator--low">
+							<span></span><span></span><span></span><span></span><span></span>
+						</div>
+					</div>
+					<div class="mindful-card__divider"></div>
+					<div class="mindful-card__item">
+						<i data-lucide="wind" class="mindful-card__icon"></i>
+						<div class="mindful-card__text">
+							<span class="mindful-card__value">12 <small>min</small></span>
+							<span class="mindful-card__label">MEDITATION</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Bottom Navigation -->
+	<nav class="bottom-nav">
+		<a class="bottom-nav__item bottom-nav__item--active">
+			<i data-lucide="home"></i>
+			<span>Home</span>
+		</a>
+		<a class="bottom-nav__item">
+			<i data-lucide="activity"></i>
+			<span>Activity</span>
+		</a>
+		<a class="bottom-nav__item">
+			<i data-lucide="moon"></i>
+			<span>Sleep</span>
+		</a>
+		<a class="bottom-nav__item">
+			<i data-lucide="user"></i>
+			<span>Profile</span>
+		</a>
+	</nav>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

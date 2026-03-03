@@ -1,2 +1,3 @@
-# blnq-fitness-pro
-Created with Blnq Studio
+# Fitness pro
+
+Created with [Blnq Studio](https://blnq.studio/e/uxBOPwE)
